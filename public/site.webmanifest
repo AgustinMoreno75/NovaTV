@@ -1,0 +1,17 @@
+{
+  "name": "NovaTV",
+  "short_name": "NovaTV",
+  "description": "Más de 1000 canales en vivo con prueba gratis de 48 horas.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030B1A",
+  "theme_color": "#030B1A",
+  "icons": [
+    {
+      "src": "/favicon.jpeg",
+      "sizes": "868x848",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
