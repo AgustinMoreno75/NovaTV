@@ -62,7 +62,7 @@ export function Pricing() {
             trackingSection="pricing"
             ariaLabel={`Contratar ${plan.name.toLowerCase()} por WhatsApp`}
           >
-            {plan.id === "monthly" ? "Contratar mensual" : "Contratar trimestral"}
+            {plan.id === "monthly" ? "Quiero el plan mensual" : "Quiero el plan trimestral"}
           </CTAButton>
           <p className="mt-3 text-center text-xs font-semibold text-brand-muted">
             Activación inmediata y asistencia por WhatsApp.

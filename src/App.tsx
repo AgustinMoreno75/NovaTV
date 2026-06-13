@@ -3,13 +3,16 @@ import logo from "./assets/novatv-logo.jpeg";
 import { AnimatedSection } from "./components/AnimatedSection";
 import { CardGrid } from "./components/CardGrid";
 import { Compatibility } from "./components/Compatibility";
+import { ConversionProof } from "./components/ConversionProof";
 import { CTAButton } from "./components/CTAButton";
 import { FAQ } from "./components/FAQ";
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 import { Hero } from "./components/Hero";
+import { MobileStickyCTA } from "./components/MobileStickyCTA";
 import { Navbar } from "./components/Navbar";
 import { Pricing } from "./components/Pricing";
 import { SectionHeading } from "./components/SectionHeading";
+import { ThreeDevices } from "./components/ThreeDevices";
 import { Timeline } from "./components/Timeline";
 import { categories, features, navItems } from "./data/site";
 import { whatsappMessages, whatsappUrl } from "./lib/whatsapp";
@@ -18,7 +21,7 @@ function App() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <div className="min-h-screen overflow-hidden bg-brand-background text-white">
+    <div className="min-h-screen overflow-hidden bg-brand-background pb-24 text-white md:pb-0">
       <Navbar />
       <main>
         <Hero />
@@ -27,8 +30,8 @@ function App() {
           <div className="section-shell">
             <SectionHeading
               eyebrow="Por qué NovaTV"
-              title="Una experiencia pensada para reemplazar el cable caro"
-              description="Canales en vivo, soporte directo y activación rápida para mirar más contenido sin quedar atado a servicios caros."
+              title="Una alternativa simple para dejar de pagar cable caro"
+              description="Canales en vivo, prueba sin riesgo, soporte directo y hasta 3 dispositivos con una misma cuenta."
             />
             <div className="mt-12">
               <CardGrid items={features} />
@@ -68,12 +71,24 @@ function App() {
           </div>
         </AnimatedSection>
 
+        <AnimatedSection className="py-20 sm:py-24">
+          <div className="section-shell">
+            <ConversionProof />
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection className="py-20 sm:py-24">
+          <div className="section-shell">
+            <ThreeDevices />
+          </div>
+        </AnimatedSection>
+
         <AnimatedSection id="planes" className="py-20 sm:py-24">
           <div className="section-shell">
             <SectionHeading
               eyebrow="Planes"
-              title="Elegí cómo querés disfrutar NovaTV"
-              description="Sin instalaciones complejas ni contratos largos. El trimestral baja el costo mensual y es la opción con mejor valor."
+              title="Elegí tu plan y empezá a mirar hoy"
+              description="El plan trimestral equivale a $10.000 por mes, incluye hasta 3 dispositivos y es la opción con mejor valor."
             />
             <div className="mt-12">
               <Pricing />
@@ -92,8 +107,8 @@ function App() {
                 Probá NovaTV gratis durante 48 horas
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-brand-muted">
-                Descubrí una nueva forma de ver televisión sin pagar de más. Sin compromiso y con
-                configuración guiada.
+                Mirá si funciona bien en tu casa, probá tus dispositivos y decidí después. Sin compromiso y
+                con configuración guiada.
               </p>
               <CTAButton
                 href={whatsappUrl(whatsappMessages.trial)}
@@ -103,7 +118,7 @@ function App() {
                 trackingSection="trial_section"
                 ariaLabel="Probar NovaTV gratis por WhatsApp"
               >
-                Probar Gratis 48 Horas
+                Quiero mi prueba gratis
               </CTAButton>
             </motion.div>
           </div>
@@ -129,7 +144,8 @@ function App() {
                 <p className="mb-3 text-sm font-bold uppercase text-brand-primary">Último paso</p>
                 <h2 className="text-4xl font-black text-white sm:text-5xl">Empezá hoy mismo</h2>
                 <p className="mt-4 max-w-2xl text-lg leading-8 text-brand-muted">
-                  Solicitá tu prueba gratuita y descubrí todo lo que NovaTV tiene para ofrecer.
+                  Pedí tu prueba gratuita, consultá compatibilidad y empezá a mirar TV online en hasta 3
+                  dispositivos.
                 </p>
               </div>
               <CTAButton
@@ -152,7 +168,7 @@ function App() {
           <div>
             <img src={logo} alt="NovaTV" className="h-11 w-auto max-w-[190px] object-contain" />
             <p className="mt-3 text-sm text-brand-muted">
-              Más de 1000 canales en vivo desde cualquier dispositivo.
+              Más de 1000 canales en vivo, prueba gratis y hasta 3 dispositivos con una cuenta.
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
@@ -170,6 +186,7 @@ function App() {
         </div>
       </footer>
       <FloatingWhatsApp />
+      <MobileStickyCTA />
     </div>
   );
 }

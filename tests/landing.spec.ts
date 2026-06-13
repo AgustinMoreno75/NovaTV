@@ -3,11 +3,11 @@ import { expect, test } from "@playwright/test";
 test("renders stable visual screenshots", async ({ page }, testInfo) => {
   await page.goto("/");
 
-  await expect(
-    page.getByRole("heading", { name: /todo tu entretenimiento en un solo lugar/i })
-  ).toBeVisible();
+  await expect(page.getByRole("heading", { name: /tv en vivo para toda tu casa/i })).toBeVisible();
   await expect(page.locator('main img[alt="NovaTV"]').first()).toBeVisible();
-  await expect(page.getByText("PLAN TRIMESTRAL")).toBeVisible();
+  await expect(page.getByText("PLAN TRIMESTRAL", { exact: true })).toBeVisible();
+  await expect(page.getByText(/hasta 3 dispositivos/i).first()).toBeVisible();
+  await expect(page.getByText("Quiero mi prueba gratis").first()).toBeVisible();
 
   const screenshot = await page.screenshot({
     path: testInfo.outputPath(`${testInfo.project.name}-landing.png`),
@@ -27,6 +27,7 @@ test("commercial CTAs point to WhatsApp with source-specific intent", async ({ p
 
   expect(hrefs.length).toBeGreaterThanOrEqual(6);
   expect(hrefs.some((href) => href.includes("probar NovaTV gratis por 48 horas"))).toBeTruthy();
+  expect(hrefs.some((href) => href.includes("3 dispositivos"))).toBeTruthy();
   expect(hrefs.some((href) => href.includes("Plan Mensual de NovaTV"))).toBeTruthy();
   expect(hrefs.some((href) => href.includes("Plan Trimestral de NovaTV"))).toBeTruthy();
   expect(hrefs.some((href) => href.includes("TV Box"))).toBeTruthy();
@@ -55,10 +56,24 @@ test("mobile menu opens and closes with Escape", async ({ page }) => {
   await expect(page.getByRole("button", { name: "Abrir menú" })).toBeVisible();
 });
 
+test("floating and sticky WhatsApp CTAs are mobile-ready", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+
+  const floating = page.getByTestId("floating-whatsapp");
+  const sticky = page.getByTestId("mobile-sticky-cta");
+
+  await expect(floating).toBeVisible();
+  await expect(floating).toHaveClass(/rounded-full/);
+  await expect(floating.locator("svg")).toBeVisible();
+  await expect(sticky).toBeVisible();
+  await expect(sticky.getByRole("link", { name: /quiero mi prueba gratis/i })).toBeVisible();
+});
+
 test("SEO metadata and structured data are present", async ({ page }) => {
   await page.goto("/");
 
-  await expect(page).toHaveTitle("NovaTV | Más de 1000 Canales en Vivo");
+  await expect(page).toHaveTitle("NovaTV IPTV Argentina | TV Online + 3 Dispositivos");
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "https://novatv.com.ar/");
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
     "content",

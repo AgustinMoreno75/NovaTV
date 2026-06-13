@@ -133,9 +133,9 @@ await page.setContent(`
       <div class="grid"></div>
       <main class="frame">
         <img class="logo" src="${logoUrl}" alt="NovaTV" />
-        <div class="badge">Más de 1000 canales en vivo</div>
-        <h1>Probá NovaTV gratis por 48 horas</h1>
-        <p>Deportes, noticias, Formula 1 y entretenimiento desde cualquier dispositivo.</p>
+        <div class="badge">IPTV Argentina · 3 dispositivos</div>
+        <h1>TV en vivo para toda tu casa</h1>
+        <p>Más de 1000 canales, prueba gratis 48 horas y una cuenta para hasta 3 dispositivos.</p>
         <div class="screen">
           <div class="tiles">
             <span class="tile"></span><span class="tile"></span><span class="tile"></span>
@@ -144,7 +144,7 @@ await page.setContent(`
         </div>
         <section class="card">
           <div class="price">$30.000 ARS</div>
-          <div class="trial">Plan trimestral</div>
+          <div class="trial">$10.000/mes · trimestral</div>
         </section>
       </main>
     </body>

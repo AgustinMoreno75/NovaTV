@@ -32,11 +32,11 @@ export function Hero() {
             Alternativa premium al cable tradicional
           </div>
           <h1 className="max-w-3xl text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl">
-            Todo tu entretenimiento en un solo lugar, sin pagar cable de más
+            TV en vivo para toda tu casa por menos que el cable
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-brand-muted sm:text-xl">
-            Más de 1000 canales nacionales e internacionales. Deportes, noticias, entretenimiento y mucho más
-            desde cualquier dispositivo, con activación rápida por WhatsApp.
+            Más de 1000 canales nacionales e internacionales, deportes, noticias y entretenimiento. Probalo 48
+            horas gratis y usá una cuenta hasta en 3 dispositivos a la vez.
           </p>
 
           <div className="mt-7 grid gap-3 sm:grid-cols-2">
@@ -56,7 +56,7 @@ export function Hero() {
               trackingSection="hero"
               ariaLabel="Probar NovaTV gratis por WhatsApp"
             >
-              Probar Gratis 48 Horas
+              Quiero mi prueba gratis
             </CTAButton>
             <CTAButton
               href="#planes"

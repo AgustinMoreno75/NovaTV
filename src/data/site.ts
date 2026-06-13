@@ -40,12 +40,11 @@ export const navItems = [
 ];
 
 export const heroBenefits = [
-  "Activación inmediata",
   "Prueba gratis 48 horas",
-  "Compatible con Smart TV y Android",
+  "Hasta 3 dispositivos a la vez",
+  "Activación guiada en minutos",
   "Soporte por WhatsApp",
-  "Sin contratos largos",
-  "Ideal para reemplazar el cable"
+  "Sin contratos largos"
 ];
 
 export const features: IconItem[] = [
@@ -61,8 +60,8 @@ export const features: IconItem[] = [
   },
   {
     icon: Monitor,
-    title: "Compatible con múltiples dispositivos",
-    description: "Disfrutá NovaTV en Smart TV, Android TV, TV Box, celulares y tablets."
+    title: "1 cuenta, 3 dispositivos",
+    description: "Miralo en Smart TV, celular, tablet o TV Box con hasta 3 dispositivos a la vez."
   },
   {
     icon: Zap,
@@ -137,27 +136,33 @@ export const pricing = [
     name: "PLAN MENSUAL",
     oldPrice: "$18.000",
     price: "$12.000",
-    period: "por mes",
-    note: "Ideal para empezar sin compromiso.",
+    period: "/ mes",
+    note: "Ideal para empezar sin compromiso y probar el servicio en tu casa.",
     valueLine: "Acceso completo durante 30 días",
     featured: false,
     ctaTrackingId: "pricing_monthly_contract",
     whatsappMessageKey: "contractMonthly",
-    features: ["Más de 1000 canales", "Activación inmediata", "Soporte por WhatsApp"]
+    features: ["Más de 1000 canales", "Hasta 3 dispositivos", "Prueba gratis 48 hs", "Instalación guiada"]
   },
   {
     id: "quarterly",
     name: "PLAN TRIMESTRAL",
     oldPrice: "$48.000",
     price: "$30.000",
-    period: "por 3 meses",
+    period: "/ 3 meses",
     note: "Mejor precio para olvidarte del cable por más tiempo.",
-    valueLine: "Equivale a $10.000 por mes",
+    valueLine: "Equivale a $10.000/mes",
     featured: true,
     badge: "MÁS ELEGIDO",
     ctaTrackingId: "pricing_quarterly_contract",
     whatsappMessageKey: "contractQuarterly",
-    features: ["Más de 1000 canales", "Activación inmediata", "Soporte por WhatsApp", "Ahorro de $6.000"]
+    features: [
+      "Más de 1000 canales",
+      "Hasta 3 dispositivos",
+      "Prueba gratis 48 hs",
+      "Instalación guiada",
+      "Ahorro de $6.000"
+    ]
   }
 ] as const;
 
@@ -172,9 +177,19 @@ export const faqs = [
       "No necesariamente. NovaTV funciona en Smart TV, Android TV, TV Box, celulares Android, tablets y Chromecast."
   },
   {
+    question: "¿Puedo usar 3 dispositivos?",
+    answer:
+      "Sí. Con una cuenta podés mirar hasta en 3 dispositivos a la vez, por ejemplo Smart TV, celular, tablet o TV Box."
+  },
+  {
     question: "¿Cómo recibo el acceso?",
     answer:
       "Después de contactarnos por WhatsApp, te enviamos usuario, contraseña y las indicaciones para instalar la app."
+  },
+  {
+    question: "¿Me ayudan a instalar?",
+    answer:
+      "Sí. Te guiamos por WhatsApp para instalar y configurar la aplicación en tu dispositivo compatible."
   },
   {
     question: "¿Cuánto tarda la activación?",
@@ -188,6 +203,16 @@ export const faqs = [
     question: "¿Necesito internet rápido?",
     answer:
       "Recomendamos una conexión estable para una mejor experiencia, especialmente en canales deportivos o de alta calidad."
+  },
+  {
+    question: "¿Puedo cancelar cuando quiera?",
+    answer:
+      "Sí. No hay contratos largos: podés elegir el plan que querés usar y renovar solo cuando quieras continuar."
+  },
+  {
+    question: "¿Qué pasa si no me funciona?",
+    answer:
+      "Primero podés probar NovaTV gratis durante 48 horas. Si necesitás ayuda, revisamos la configuración por WhatsApp."
   }
 ];
 
@@ -198,4 +223,13 @@ export const trustItems = [
   { icon: BadgeCheck, label: "Alta rápida" },
   { icon: CheckCircle2, label: "Sin cable caro" },
   { icon: Clock3, label: "48 hs gratis" }
+];
+
+export const threeDevices = ["TV Android del living", "Celular Android", "Tablet o TV Box"];
+
+export const conversionProof = [
+  "Probá 48 horas gratis",
+  "Activación guiada por WhatsApp",
+  "Hasta 3 dispositivos a la vez",
+  "Sin contrato largo"
 ];

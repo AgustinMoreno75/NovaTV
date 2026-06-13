@@ -1,7 +1,8 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { trackCtaClick } from "../lib/analytics";
+import { WhatsAppLogo } from "./WhatsAppLogo";
 
 type CTAButtonProps = {
   href: string;
@@ -33,7 +34,7 @@ export function CTAButton({
       "border border-white/16 bg-white/8 text-white hover:border-brand-primary/70 hover:bg-brand-primary/14",
     ghost: "text-white hover:text-brand-primary"
   };
-  const Icon = icon === "whatsapp" ? MessageCircle : ArrowRight;
+  const Icon = icon === "whatsapp" ? WhatsAppLogo : ArrowRight;
 
   return (
     <motion.a
