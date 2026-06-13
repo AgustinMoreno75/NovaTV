@@ -133,7 +133,7 @@ await page.setContent(`
       <div class="grid"></div>
       <main class="frame">
         <img class="logo" src="${logoUrl}" alt="NovaTV" />
-        <div class="badge">IPTV Argentina · 3 dispositivos</div>
+        <div class="badge"> Argentina · 3 dispositivos</div>
         <h1>TV en vivo para toda tu casa</h1>
         <p>Más de 1000 canales, prueba gratis 48 horas y una cuenta para hasta 3 dispositivos.</p>
         <div class="screen">

@@ -73,7 +73,7 @@ test("floating and sticky WhatsApp CTAs are mobile-ready", async ({ page }) => {
 test("SEO metadata and structured data are present", async ({ page }) => {
   await page.goto("/");
 
-  await expect(page).toHaveTitle("NovaTV IPTV Argentina | TV Online + 3 Dispositivos");
+  await expect(page).toHaveTitle("NovaTV | Mas De 1000 Canales En Vivo Para Toda Tu Casa");
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "https://novatv.com.ar/");
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
     "content",

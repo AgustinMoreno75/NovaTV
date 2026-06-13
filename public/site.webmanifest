@@ -1,7 +1,7 @@
 {
   "name": "NovaTV",
   "short_name": "NovaTV",
-  "description": "IPTV en Argentina con más de 1000 canales, prueba gratis de 48 horas y hasta 3 dispositivos.",
+  "description": "NovaTV en Argentina con más de 1000 canales en vivo, prueba gratis de 48 horas y hasta 3 dispositivos.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#030B1A",
