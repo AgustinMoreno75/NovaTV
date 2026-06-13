@@ -36,12 +36,12 @@ test("commercial CTAs point to WhatsApp with source-specific intent", async ({ p
 test("FAQ accordion exposes accessible controls", async ({ page }) => {
   await page.goto("/#faq");
 
-  const question = page.getByRole("button", { name: "¿Necesito Smart TV?" });
+  const question = page.getByRole("button", { name: "¿Necesito Android TV?" });
   await question.click();
 
   await expect(question).toHaveAttribute("aria-expanded", "true");
   await expect(question).toHaveAttribute("aria-controls", /faq-panel-/);
-  await expect(page.getByText(/NovaTV funciona en Smart TV/i)).toBeVisible();
+  await expect(page.getByText(/NovaTV funciona en Android TV/i)).toBeVisible();
 });
 
 test("mobile menu opens and closes with Escape", async ({ page }) => {

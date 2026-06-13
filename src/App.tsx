@@ -11,6 +11,7 @@ import { Hero } from "./components/Hero";
 import { MobileStickyCTA } from "./components/MobileStickyCTA";
 import { Navbar } from "./components/Navbar";
 import { Pricing } from "./components/Pricing";
+import { ReferralProgram } from "./components/ReferralProgram";
 import { SectionHeading } from "./components/SectionHeading";
 import { ThreeDevices } from "./components/ThreeDevices";
 import { Timeline } from "./components/Timeline";
@@ -85,6 +86,41 @@ function App() {
 
         <AnimatedSection id="planes" className="py-20 sm:py-24">
           <div className="section-shell">
+            <motion.div
+              className="glass-border mb-8 rounded-lg p-5 sm:mb-10 sm:p-6"
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+              whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={shouldReduceMotion ? undefined : { duration: 0.55 }}
+            >
+              <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+                <div className="max-w-2xl">
+                  <p className="text-sm font-bold uppercase text-brand-primary">Antes de elegir tu plan</p>
+                  <h3 className="mt-3 text-2xl font-black text-white sm:text-3xl">
+                    Invitá amigos y convertí tus recomendaciones en meses gratis
+                  </h3>
+                  <p className="mt-3 text-base leading-8 text-brand-muted">
+                    Cada nuevo cliente que entra con tu código te suma 1 mes gratis. Contratás hoy y ya
+                    podés aprovechar el programa de referidos.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3 sm:items-start lg:items-end">
+                  <p className="text-sm font-black text-white">1 referido = 1 mes gratis</p>
+                  <CTAButton
+                    href="#referidos"
+                    external={false}
+                    variant="secondary"
+                    className="w-full sm:w-auto"
+                    trackingId="pricing_referral_teaser"
+                    trackingSection="pricing_teaser"
+                    ariaLabel="Ir a la sección del programa de referidos"
+                  >
+                    Ver programa de referidos
+                  </CTAButton>
+                </div>
+              </div>
+            </motion.div>
+
             <SectionHeading
               eyebrow="Planes"
               title="Elegí tu plan y empezá a mirar hoy"
@@ -93,6 +129,12 @@ function App() {
             <div className="mt-12">
               <Pricing />
             </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection id="referidos" className="py-20 sm:py-24">
+          <div className="section-shell">
+            <ReferralProgram />
           </div>
         </AnimatedSection>
 

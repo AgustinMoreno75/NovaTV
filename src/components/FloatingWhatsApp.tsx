@@ -14,7 +14,7 @@ export function FloatingWhatsApp() {
       rel="noreferrer"
       aria-label="Probar NovaTV gratis por WhatsApp"
       data-testid="floating-whatsapp"
-      className="fixed bottom-24 right-5 z-50 inline-flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_18px_45px_rgba(37,211,102,0.42)] ring-4 ring-white/10 md:bottom-5"
+      className="fixed bottom-5 right-5 z-50 hidden h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_18px_45px_rgba(37,211,102,0.42)] ring-4 ring-white/10 md:inline-flex"
       onClick={() =>
         trackCtaClick({
           ctaId: "floating_whatsapp_trial",

@@ -14,10 +14,12 @@ import {
   Monitor,
   Newspaper,
   Play,
+  Share2,
   ShieldCheck,
   Smartphone,
   Sparkles,
   Tablet,
+  Gift,
   Trophy,
   Tv,
   Wifi,
@@ -31,11 +33,19 @@ export type IconItem = {
   description: string;
 };
 
+export type ReferralStep = {
+  icon: LucideIcon;
+  title: string;
+  text: string;
+  code?: string;
+};
+
 export const navItems = [
   { label: "Inicio", href: "#inicio" },
   { label: "Beneficios", href: "#beneficios" },
   { label: "Compatibilidad", href: "#compatibilidad" },
   { label: "Planes", href: "#planes" },
+  { label: "Referidos", href: "#referidos" },
   { label: "FAQ", href: "#faq" }
 ];
 
@@ -61,7 +71,7 @@ export const features: IconItem[] = [
   {
     icon: Monitor,
     title: "1 cuenta, 3 dispositivos",
-    description: "Miralo en Smart TV, celular, tablet o TV Box con hasta 3 dispositivos a la vez."
+    description: "Miralo en Android TV, celular, tablet o TV Box con hasta 3 dispositivos a la vez."
   },
   {
     icon: Zap,
@@ -100,9 +110,9 @@ export const categories: IconItem[] = [
 
 export const devices = [
   { icon: Tv, label: "Android TV" },
-  { icon: Monitor, label: "Smart TV" },
+  { icon: Monitor, label: "Google TV" },
   { icon: Box, label: "TV Box" },
-  { icon: Smartphone, label: "Android Phone" },
+  { icon: Smartphone, label: "Celular Android" },
   { icon: Tablet, label: "Tablet" },
   { icon: Cast, label: "Chromecast" }
 ];
@@ -129,6 +139,25 @@ export const steps = [
     text: "Entrá, elegí qué ver y empezá a disfrutar NovaTV."
   }
 ];
+
+export const referralSteps: ReferralStep[] = [
+  {
+    icon: Share2,
+    title: "Compartí tu código",
+    text: "Mandás tu código por WhatsApp o como prefieras para invitar a nuevos clientes.",
+    code: "DAMIAN1224"
+  },
+  {
+    icon: Tv,
+    title: "Tu amigo contrata NovaTV",
+    text: "Cuando se suma al servicio usando tu código, el referido queda asociado a tu cuenta."
+  },
+  {
+    icon: Gift,
+    title: "Recibís 1 mes gratis",
+    text: "Después del primer pago del nuevo cliente, te acreditamos un mes sin cargo."
+  }
+] as const;
 
 export const pricing = [
   {
@@ -172,14 +201,19 @@ export const faqs = [
     answer: "Sí. Podés solicitar una prueba gratuita de 48 horas para conocer NovaTV antes de contratar."
   },
   {
-    question: "¿Necesito Smart TV?",
+    question: "¿Necesito un dispositivo Android?",
     answer:
-      "No necesariamente. NovaTV funciona en Smart TV, Android TV, TV Box, celulares Android, tablets y Chromecast."
+      "Sí, necesitás un dispositivo compatible con Android. NovaTV funciona en Android TV, Google TV, TV Box, celulares Android, tablets y Chromecast."
   },
   {
     question: "¿Puedo usar 3 dispositivos?",
     answer:
-      "Sí. Con una cuenta podés mirar hasta en 3 dispositivos a la vez, por ejemplo Smart TV, celular, tablet o TV Box."
+      "Sí. Con una cuenta podés mirar hasta en 3 dispositivos a la vez, por ejemplo Android TV, celular, tablet o TV Box."
+  },
+  {
+    question: "¿Cómo funciona el programa de referidos?",
+    answer:
+      "Compartí tu código de referido con amigos. Cuando un nuevo cliente contrata NovaTV utilizando tu código y completa su primer pago, recibís 1 mes gratis de servicio."
   },
   {
     question: "¿Cómo recibo el acceso?",
@@ -225,7 +259,7 @@ export const trustItems = [
   { icon: Clock3, label: "48 hs gratis" }
 ];
 
-export const threeDevices = ["TV Android del living", "Celular Android", "Tablet o TV Box"];
+export const threeDevices = ["Android TV del living", "Celular Android", "Tablet o TV Box"];
 
 export const conversionProof = [
   "Probá 48 horas gratis",

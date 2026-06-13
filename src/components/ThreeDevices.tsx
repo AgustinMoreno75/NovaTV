@@ -15,7 +15,7 @@ export function ThreeDevices() {
       <SectionHeading
         eyebrow="Más valor por cuenta"
         title="1 cuenta, hasta 3 dispositivos"
-        description="Con una cuenta podés mirar hasta en 3 dispositivos a la vez: Smart TV, celular, tablet o TV Box."
+        description="Con una cuenta podés mirar hasta en 3 dispositivos a la vez: Android TV, celular, tablet o TV Box."
         align="left"
       />
 
